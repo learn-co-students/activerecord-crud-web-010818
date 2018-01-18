@@ -7,4 +7,5 @@ require 'sinatra/activerecord/rake'
 
 task :console do
   Pry.start
+  ActiveRecord::Base.logger = Logger.new(STDOUT)
 end
